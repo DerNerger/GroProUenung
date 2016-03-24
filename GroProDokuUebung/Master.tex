@@ -1,0 +1,40 @@
+\documentclass{gropro}
+\usepackage[utf8]{inputenc}
+
+\Autor{Kibellus Felix}
+\PruefungsNR{12345}
+\Ausbildungsort{Jülich}
+\Programmiersprache{Java}
+\Compiler{javac}
+\Rechner{OPTIPLEX 7010}
+\Betriebssystem{openSUSE 13.2 x86\_64}
+%Mit includeonly koennen einzelne Kapitel seperat compiliert werden.
+%Beispiel: \includeonly{Aufgabenanalyse} 
+%         -> Das Dokument besteht nur aus dem Kapitel "Aufgabenanalyse" 
+%\includeonly{}
+
+\begin{document}
+
+  \maketitle
+  \pagenumbering{Roman} 
+  \tableofcontents
+  \cleardoublepage
+  
+  \pagenumbering{arabic}
+  \Ginclude{Aufgabenanalyse}
+  \Ginclude{Verfahrensbeschreibung}
+  \Ginclude{Programmbeschreibung}
+  \Ginclude{Testdokumentation}
+  
+  \begin{appendix}
+    \Ginclude{Abweichungen}
+    \Ginclude{Benutzeranleitung}
+    \Ginclude{Entwicklungsumgebung}
+    \Ginclude{Hilfsmittel}
+    \makedeposition
+    \Ginclude{Aufgabenstellung_Deckblatt}
+    \Ginclude{Quellcode_Deckblatt}
+    \Ginclude{Test_Deckblatt}
+  \end{appendix}
+
+\end{document}
